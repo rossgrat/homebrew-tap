@@ -20,6 +20,20 @@ brew install panopticon
 | --- | --- |
 | [`panopticon`](https://github.com/rossgrat/panopticon) | Find every git repo on your machine and pull it |
 
+## Casks
+
+| Cask | What it does |
+| --- | --- |
+| [`frontpair`](https://github.com/rossgrat/frontpair) | Share an audio interface's hardware loopback into calls as a microphone |
+
+```sh
+brew install --cask rossgrat/tap/frontpair
+```
+
+Casks sit outside the bump automation below: `frontpair` ships a `.pkg` (it installs a CoreAudio
+driver, which needs a root install and a `coreaudiod` restart), not the CLI tarballs `bump.sh`
+understands. Update its `version` and `sha256` by hand when cutting a release.
+
 ## How a formula stays current
 
 Each tool's own repo publishes release archives plus a `checksums.txt` on every
