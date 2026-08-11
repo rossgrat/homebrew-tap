@@ -3,8 +3,6 @@ class Panopticon < Formula
   homepage "https://github.com/rossgrat/panopticon"
   license "MIT"
 
-  depends_on "git"
-
   on_macos do
     on_arm do
       url "https://github.com/rossgrat/panopticon/releases/download/v0.1.0/panopticon_v0.1.0_darwin_arm64.tar.gz"
