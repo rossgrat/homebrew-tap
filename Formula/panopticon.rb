@@ -25,6 +25,8 @@ class Panopticon < Formula
     end
   end
 
+  depends_on "git"
+
   def install
     bin.install "panopticon"
   end
