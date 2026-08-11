@@ -3,6 +3,8 @@ class Panopticon < Formula
   homepage "https://github.com/rossgrat/panopticon"
   license "MIT"
 
+  depends_on "git"
+
   on_macos do
     on_arm do
       url "https://github.com/rossgrat/panopticon/releases/download/v0.1.0/panopticon_v0.1.0_darwin_arm64.tar.gz"
@@ -24,8 +26,6 @@ class Panopticon < Formula
       sha256 "287185287dfe80ff46c4adbd44e7afb8202c6eb34e2968af0b5da14e6bf9584b"
     end
   end
-
-  depends_on "git"
 
   def install
     bin.install "panopticon"
