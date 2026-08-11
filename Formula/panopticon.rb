@@ -1,7 +1,6 @@
 class Panopticon < Formula
   desc "Find every git repo on your machine and pull it"
   homepage "https://github.com/rossgrat/panopticon"
-  version "0.0.0"
   license "MIT"
 
   on_macos do
