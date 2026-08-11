@@ -1,6 +1,6 @@
 cask "frontpair" do
-  version "0.1.0"
-  sha256 "3f19a359d75248208729e912758f9f26e28eba932282b18ff99193b9f9e9d1b1"
+  version "0.1.1"
+  sha256 "26e97eeabd88896a1242fb7689699e7b315f2ad7357f07eaa5081f89ef7c7d0a"
 
   url "https://github.com/rossgrat/frontpair/releases/download/v#{version}/frontpair-#{version}.pkg"
   name "frontpair"
@@ -22,10 +22,9 @@ cask "frontpair" do
             ]
 
   caveats <<~EOS
-    Launch frontpaird once to approve the microphone prompt — it captures the
-    interface, so macOS must grant it microphone access before audio flows:
-
-      open /Applications/frontpaird.app
+    macOS will prompt once for microphone access — approve it. frontpaird
+    captures the audio interface, so without that grant it runs but carries
+    silence. It starts again at every login; see /tmp/frontpaird.log.
 
     Then select "frontpair" as the microphone in Zoom, Teams, or Discord. For
     music, enable Zoom's Original Sound / high-fidelity music mode and turn echo
