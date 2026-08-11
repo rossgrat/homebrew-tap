@@ -1,0 +1,37 @@
+name: bump
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        tool: [panopticon]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Point ${{ matrix.tool }} at its latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: scripts/bump.sh ${{ matrix.tool }}
+
+      - name: Commit if the formula moved
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo "already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Bump ${{ matrix.tool }}"
+          git pull --rebase --quiet
+          git push
