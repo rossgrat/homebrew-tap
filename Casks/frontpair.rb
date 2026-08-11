@@ -1,6 +1,6 @@
 cask "frontpair" do
-  version "0.1.1"
-  sha256 "26e97eeabd88896a1242fb7689699e7b315f2ad7357f07eaa5081f89ef7c7d0a"
+  version "0.1.2"
+  sha256 "9f2d8dab532c682e0a81b3a16fa29289e41cd735621ce3521e18476e0aba6d1e"
 
   url "https://github.com/rossgrat/frontpair/releases/download/v#{version}/frontpair-#{version}.pkg"
   name "frontpair"
@@ -24,7 +24,10 @@ cask "frontpair" do
   caveats <<~EOS
     macOS will prompt once for microphone access — approve it. frontpaird
     captures the audio interface, so without that grant it runs but carries
-    silence. It starts again at every login; see /tmp/frontpaird.log.
+    silence. It starts again at every login and waits for the interface if it
+    is unplugged. It logs to the unified log, not a file:
+
+      log show --last 10m --debug --predicate 'subsystem == "dev.grattafiori.frontpair"'
 
     Then select "frontpair" as the microphone in Zoom, Teams, or Discord. For
     music, enable Zoom's Original Sound / high-fidelity music mode and turn echo
