@@ -32,6 +32,6 @@ class Panopticon < Formula
   end
 
   test do
-    assert_match "find every git repo", shell_output("#{bin}/panopticon --help")
+    assert_match "find every git repo", shell_output("#{bin}/panopticon --help 2>&1")
   end
 end
