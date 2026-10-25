@@ -9,8 +9,7 @@ cask "frontpair" do
 
   depends_on macos: :monterey
 
-  # The package is ad-hoc signed, so the installer needs to be told to accept it.
-  pkg "frontpair-#{version}.pkg", allow_untrusted: true
+  pkg "frontpair-#{version}.pkg"
 
   uninstall launchctl: "dev.grattafiori.frontpaird",
             quit:      "dev.grattafiori.frontpaird",
