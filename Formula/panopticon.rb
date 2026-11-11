@@ -5,23 +5,23 @@ class Panopticon < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/rossgrat/panopticon/releases/download/v0.1.0/panopticon_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "2c56d8e09a4d49cd336ecfac555e674888d6b51e2114d28d64406df7f947204f"
+      url "https://github.com/rossgrat/panopticon/releases/download/v0.2.0/panopticon_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "26243c63a43be1ea167fb10f74a1cbf16757ddbc0079390192e9bdff31bb41be"
     end
     on_intel do
-      url "https://github.com/rossgrat/panopticon/releases/download/v0.1.0/panopticon_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "1396c2ef4f093b0f531233620dc4b77759b77664a3b9ee696d34b0bf510ea65d"
+      url "https://github.com/rossgrat/panopticon/releases/download/v0.2.0/panopticon_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "201f06f26aaec340959c247107a4bc655eaf5bbde07a9ab2ec6bbbf7dc6a1faa"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/rossgrat/panopticon/releases/download/v0.1.0/panopticon_v0.1.0_linux_arm64.tar.gz"
-      sha256 "04c106badb763b4a0f1530ea1dd11271b269f018e6d9cdd84197829f7a33de90"
+      url "https://github.com/rossgrat/panopticon/releases/download/v0.2.0/panopticon_v0.2.0_linux_arm64.tar.gz"
+      sha256 "49ec041feb3d575097b4db29cfbb098b57cee60fb2bc962fa2578081f8f13027"
     end
     on_intel do
-      url "https://github.com/rossgrat/panopticon/releases/download/v0.1.0/panopticon_v0.1.0_linux_amd64.tar.gz"
-      sha256 "287185287dfe80ff46c4adbd44e7afb8202c6eb34e2968af0b5da14e6bf9584b"
+      url "https://github.com/rossgrat/panopticon/releases/download/v0.2.0/panopticon_v0.2.0_linux_amd64.tar.gz"
+      sha256 "0fd4a47c489462eb958cff6f4d77c3f6d5436282d779378c483a1fdddd86aa34"
     end
   end
 
